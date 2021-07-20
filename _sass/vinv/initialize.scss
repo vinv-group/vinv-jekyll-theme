@@ -38,6 +38,10 @@ body {
     text-align: left;
     background-color: #f5f5f5;
 }
+body , html{
+    height: 100%;
+}
+
 .navbar-brand{
     //text-shadow: 0 0 1px rgba(37, 37, 37, 0.5);
 }
@@ -87,9 +91,53 @@ small{
 
 .vinv-content{
     max-width: 700px;
-    margin-top: 100px;
+    padding-top: 100px;
 }
 
 table{
     width: 100%;
+}
+
+.vinv-doc-nav{
+    height: 100vh;
+    overflow-y: auto;
+    width: 200px;
+    background-color: #fff;
+    position: fixed;
+    border-left: 1px solid #ddd;
+    top:0;
+    padding-top: 80px;
+}
+.vinv-doc-content-wrapper{
+    margin-left: 200px;
+}
+
+@media screen and (max-width: 524px){
+    .vinv-doc-nav{
+        left: -200px;
+    }
+    .vinv-doc-content-wrapper{
+        margin-left: 0px;
+    }
+}
+
+nav.vinv-sidebar a{
+    text-decoration: none;
+}
+nav.vinv-sidebar ul{
+    list-style: none;
+}
+nav.vinv-sidebar li a:before{
+    content: '.';
+    margin-right: 5px;
+}
+
+pre{
+    background-color: #fff;
+    border-radius: 6px;
+    font-size: 85%;
+    line-height: 1.45;
+    overflow: auto;
+    padding: 16px;
+    font-family: ui-monospace, monospace;
 }
