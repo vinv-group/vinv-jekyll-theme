@@ -113,9 +113,6 @@ table{
 }
 
 @media screen and (max-width: 524px){
-    .vinv-doc-nav{
-        left: -200px;
-    }
     .vinv-doc-content-wrapper{
         margin-left: 0px;
     }
@@ -126,6 +123,7 @@ nav.vinv-sidebar a{
 }
 nav.vinv-sidebar ul{
     list-style: none;
+    padding-left: 10px;
 }
 nav.vinv-sidebar li a:before{
     content: '.';
@@ -140,4 +138,28 @@ pre{
     overflow: auto;
     padding: 16px;
     font-family: ui-monospace, monospace;
+}
+#vinv-doc-nav-btn{
+    top: 100px;
+    left: 0;
+    position: fixed;
+}
+
+#vinv-sidebar.vinv-sidebar-visible{
+    #vinv-doc-nav{
+        display: none;
+    }
+    .vinv-doc-content-wrapper{
+        margin-left: 0;
+    }
+}
+#vinv-sidebar:not(.vinv-sidebar-visible){
+    #vinv-doc-nav-btn{
+        display: none;
+    }
+}
+#vinv-nav-close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
 }

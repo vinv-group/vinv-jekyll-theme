@@ -2,10 +2,14 @@
 layout: default
 ---
 
-<div class="">
-    <div class="container vinv-doc-nav">
-        {% include nav.html %}
+<div id="vinv-sidebar">
+    <div id="vinv-doc-nav" class="container vinv-doc-nav">
+       <div class="position-relative">
+            <button id="vinv-nav-close-btn" class="position-absolute absolute-top absolute-right btn"><i class="bi bi-x"></i></button>
+            {% include nav.html %}
+       </div>
     </div>
+    <button id="vinv-doc-nav-btn" class="btn position-fixed btn-dark rounded-0 shadow"><i class="bi bi-list"></i></button>
     <div class="vinv-doc-content-wrapper">
         <div class="container vinv-content">
             {{ content }}
@@ -15,3 +19,13 @@ layout: default
 </div>
 
 
+<script type="text/javascript">
+
+    function toggleNav(){
+        document.getElementById('vinv-sidebar').classList.toggle('vinv-sidebar-visible');
+    }
+
+    document.getElementById('vinv-doc-nav-btn').addEventListener('click', toggleNav);
+    document.getElementById('vinv-nav-close-btn').addEventListener('click', toggleNav);
+
+</script>
