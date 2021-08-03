@@ -1,7 +1,7 @@
 
 <nav class="vinv-sidebar">
 {% for item in site.data.documentation.toc %}
-    <h3 class="text-nowrap">{{ item.title }}</h3>
+    <span class="text-nowrap h5">{{ item.title }}</span>
     <ul>
     {% for entry in item.subfolderitems %}
         <li>

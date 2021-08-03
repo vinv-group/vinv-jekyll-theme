@@ -1,11 +1,11 @@
 {
     "toc": [
         {
-            "title": "Overview",
+            "title": "Getting started",
             "subfolderitems": [
                 {
-                    "page": "Overview",
-                    "url": "/getting-started.html"
+                    "page": "Format",
+                    "url": "./getting-started.html#vinv-exchange-format"
                 }
             ]
         },

@@ -171,7 +171,9 @@ code{
     padding: 2px;
     background-color: #b5b5b569;
 }
-
+pre code{
+    background-color: none;
+}
 .vinv-contributors-avatar{
     max-width: 50px;
 }
