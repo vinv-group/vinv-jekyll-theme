@@ -1,0 +1,66 @@
+
+<p id="contributors-individuals-list"></p>
+<script type="text/javascript">
+  function htmlPeople(data){
+
+    var wrapper = document.createElement('div');
+    wrapper.classList.add('mb-4');
+
+    var element = document.createElement('A');
+    element.classList.add('m-1');
+    element.setAttribute('href', data.html_url);
+    element.setAttribute('rel', "noreferrer");
+    element.setAttribute('target', "_blank");
+
+    var avatar = document.createElement('IMG');
+    avatar.classList.add('rounded-circle', 'vinv-contributors-avatar');
+    avatar.setAttribute('src', data.avatar_url);
+    avatar.setAttribute('data-bs-toggle', 'tooltip');
+    avatar.setAttribute('title', data.login);
+    avatar.setAttribute('data-bs-placement', 'right');
+
+    element.appendChild(avatar);
+    wrapper.appendChild(element);
+    wrapper.appendChild(document.createElement('br'));
+
+    if(sponsorings[data.login]){
+      var sponsorLink = document.createElement('A');
+      sponsorLink.classList.add('m-1');
+      sponsorLink.setAttribute('href', sponsorings[data.login]);
+      sponsorLink.setAttribute('rel', "noreferrer");
+      sponsorLink.setAttribute('target', "_blank");
+
+      var sponsorSpan = document.createElement('span');
+      sponsorSpan.appendChild(sponsorLink);
+
+      var sponsorSmall = document.createElement('SMALL');
+      sponsorSmall.innerText = 'Sponsor';
+      sponsorLink.appendChild(sponsorSmall);
+      sponsorSpan.appendChild(sponsorLink);
+
+      wrapper.appendChild(sponsorSpan);
+    }
+
+
+    
+    
+    
+    return wrapper;
+  }
+  var sponsorings = {
+    'b-lack': 'https://github.com/sponsors/b-lack'
+  };
+
+  var listWrapper = document.getElementById('contributors-individuals-list');
+  listWrapper.classList.add('d-flex', 'flex-wrap');
+
+  var drawContributorsList = function(data){
+    for(var i = 0; i< data.length; i++){
+      listWrapper.appendChild(htmlPeople(data[i]));
+    }
+    
+  }
+  fetch('https://api.github.com/orgs/vinv-group/members')
+    .then(response => response.json())
+    .then(data => drawContributorsList(data));
+</script>

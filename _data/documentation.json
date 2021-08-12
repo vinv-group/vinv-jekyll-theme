@@ -4,17 +4,16 @@
             "title": "Getting started",
             "subfolderitems": [
                 {
-                    "page": "Format",
-                    "url": "./getting-started.html#vinv-exchange-format"
-                }
-            ]
-        },
-        {
-            "title": "vinv-Schema",
-            "subfolderitems": [
+                    "page": "Basics",
+                    "url": "./getting-started.html"
+                },
                 {
-                    "page": "Overview",
-                    "url": "/vinv-schema/overview.html"
+                    "page": ".vinv Format",
+                    "url": "./format.html"
+                },
+                {
+                    "page": "Validation",
+                    "url": "./validation.html"
                 }
             ]
         }
