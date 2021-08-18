@@ -200,3 +200,22 @@ pre{
         
     }
 }
+
+.vinv-overlay{
+    font-size: .6rem;
+    .card-body{
+        max-height: 115px;
+        overflow: scroll;
+    }
+}
+.vinv-overlay:after{
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    width: 100px;
+    border-top: 1px solid #fff;
+    transform: rotate(25deg);
+    transform-origin: bottom right;
+    right: 100%;
+}
