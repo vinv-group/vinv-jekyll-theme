@@ -5,6 +5,6 @@ description: Lightweight data standard and structure for single-tree based fores
 
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://vinv.io" # the base hostname & protocol for your site, e.g. http://example.com
-name: "vinv Virtual Inventory"
+name: "Virtual Inventory"
 lang: "en"
 tags: "forestry, inventory, vinv, standard, exchange"

@@ -21,7 +21,7 @@ a:hover{
 }
 main{
     background-image: url('../img/background_vinv_sw.svg');
-    padding-top: 60px;
+    padding-top: 80px;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .hp{
     font-family: 'Times New Roman', Times, serif;
@@ -34,7 +34,7 @@ h1, .h1 {
     font-size: 3.75rem;
 }
 .vinv-first-line{
-    font-size: 1.3rem;
+    font-weight: bold;
 }
 body {
     margin: 0;
@@ -52,6 +52,12 @@ body , html{
 
 .navbar-brand{
     //text-shadow: 0 0 1px rgba(37, 37, 37, 0.5);
+    font-size: 1rem !important;
+    font-family: 'Times New Roman', Times, serif;
+    .vinv-brand-name{
+        font-size: 1.5rem !important;
+        font-weight: bold;
+    }
 }
 .navbar{
     background-color: white;
@@ -113,13 +119,16 @@ table{
     position: fixed;
     border-right: 1px solid #1a1e21;
     top:0;
-    padding-top: 80px;
+    padding-top: 120px;
 }
 .vinv-doc-content-wrapper{
     margin-left: 200px;
 }
 
 @media screen and (max-width: 524px){
+    .vinv-brand-txt{
+        display: none !important;
+    }
     .vinv-doc-content-wrapper{
         margin-left: 0px;
     }
@@ -218,4 +227,11 @@ pre{
     transform: rotate(25deg);
     transform-origin: bottom right;
     right: 100%;
+}
+
+.vinv-precision-forestry{
+    img.rounded{
+        border-left: 10px solid #d5ede3;
+        border-bottom: 10px solid #b5f0d6;
+    }
 }
